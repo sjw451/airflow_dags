@@ -23,7 +23,7 @@ from datetime import datetime
 from airflow import DAG
 from airflow.decorators import task
 
-with DAG(dag_id="example_dynamic_task_mapping", start_date='@daily') as dag:
+with DAG(dag_id="example_dynamic_task_mapping", schedule_interval='@daily') as dag:
 
     @task
     def add_one(x: int):
